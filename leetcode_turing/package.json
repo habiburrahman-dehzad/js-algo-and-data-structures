@@ -1,0 +1,17 @@
+{
+  "name": "dev",
+  "version": "1.0.0",
+  "description": "JavaScript algorithms and data structures demonstrated",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "author": "Habiburrahman Dehzad",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.6.3"
+  }
+}
