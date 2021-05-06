@@ -21,35 +21,39 @@ function chunk(array, size) {
 
 module.exports = chunk;
 
-// function chunk(array, size) {
-//   const chunks = [];
+/*
+function chunk(array, size) {
+  const chunks = [];
 
-//   for (let element of array) {
-//     const last = chunks[chunks.length - 1];
-//     if (!last || last.length === size) {
-//       chunks.push([element]);
-//     } else {
-//       last.push(element);
-//     }
-//   }
+  for (let element of array) {
+    const last = chunks[chunks.length - 1];
+    if (!last || last.length === size) {
+      chunks.push([element]);
+    } else {
+      last.push(element);
+    }
+  }
 
-//   return chunks;
-// }
+  return chunks;
+}
+*/
 
-// function chunk(array, size) {
-//   const chunks = [];
+/*
+function chunk(array, size) {
+  const chunks = [];
 
-//   let len = array.length;
-//   let step = size;
-//   while (step < len + size) {
-//     const arr = [];
-//     for (let index = step - size; index < step && index < len; index++) {
-//       arr.push(array[index]);
-//     }
+  let len = array.length;
+  let step = size;
+  while (step < len + size) {
+    const arr = [];
+    for (let index = step - size; index < step && index < len; index++) {
+      arr.push(array[index]);
+    }
 
-//     chunks.push(arr);
-//     step += size;
-//   }
+    chunks.push(arr);
+    step += size;
+  }
 
-//   return chunks;
-// }
+  return chunks;
+}
+*/

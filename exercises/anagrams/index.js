@@ -22,27 +22,31 @@ function anagrams(stringA, stringB) {
 
 module.exports = anagrams;
 
-// const buildCharMap = (str) => {
-//   const charMap = {};
-//   for (const char of str.toLowerCase().replace(/[^a-z]+/g, '')) {
-//     charMap[char] = charMap[char] + 1 || 1;
-//   }
-//   return charMap;
-// };
+/*
+const buildCharMap = (str) => {
+  const charMap = {};
+  for (const char of str.toLowerCase().replace(/[^a-z]+/g, '')) {
+    charMap[char] = charMap[char] + 1 || 1;
+  }
+  return charMap;
+};
+*/
 
-// function anagrams(stringA, stringB) {
-//   const objA = buildCharMap(stringA);
-//   const objB = buildCharMap(stringB);
+/*
+function anagrams(stringA, stringB) {
+  const objA = buildCharMap(stringA);
+  const objB = buildCharMap(stringB);
 
-//   if (Object.keys(objA).length !== Object.keys(objB).length) {
-//     return false;
-//   }
+  if (Object.keys(objA).length !== Object.keys(objB).length) {
+    return false;
+  }
 
-//   for (const key in objA) {
-//     if (objA[key] !== objB[key]) {
-//       return false;
-//     }
-//   }
+  for (const key in objA) {
+    if (objA[key] !== objB[key]) {
+      return false;
+    }
+  }
 
-//   return true;
-// }
+  return true;
+}
+*/

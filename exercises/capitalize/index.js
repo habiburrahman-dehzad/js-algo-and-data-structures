@@ -23,14 +23,16 @@ function capitalize(str) {
 
 module.exports = capitalize;
 
-// function capitalize(str) {
-//   const capitalized = str
-//     .split(' ')
-//     .map((word) => {
-//       let first = word[0].toUpperCase();
-//       return first + word.slice(1);
-//     })
-//     .join(' ');
+/*
+function capitalize(str) {
+  const capitalized = str
+    .split(' ')
+    .map((word) => {
+      let first = word[0].toUpperCase();
+      return first + word.slice(1);
+    })
+    .join(' ');
 
-//   return capitalized;
-// }
+  return capitalized;
+}
+*/

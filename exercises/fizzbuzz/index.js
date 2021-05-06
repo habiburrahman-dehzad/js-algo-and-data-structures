@@ -33,17 +33,19 @@ function fizzBuzz(n) {
 
 module.exports = fizzBuzz;
 
-// function fizzBuzz(n) {
-//   let step = 1;
-//   while (step <= n) {
-//     const fizz = step % 3 === 0;
-//     const buzz = step % 5 === 0;
+/*
+function fizzBuzz(n) {
+  let step = 1;
+  while (step <= n) {
+    const fizz = step % 3 === 0;
+    const buzz = step % 5 === 0;
 
-//     fizz && buzz && console.log('fizzbuzz');
-//     fizz && !buzz && console.log('fizz');
-//     buzz && !fizz && console.log('buzz');
-//     !fizz && !buzz && console.log(step);
+    fizz && buzz && console.log('fizzbuzz');
+    fizz && !buzz && console.log('fizz');
+    buzz && !fizz && console.log('buzz');
+    !fizz && !buzz && console.log(step);
 
-//     step++;
-//   }
-// }
+    step++;
+  }
+}
+*/
