@@ -157,9 +157,7 @@ class BinarySearchTree {
   // Breadth first search - level by level
   breadthFirstSearch() {
     let result = [];
-    let queue = [];
-
-    queue.push(this.root);
+    let queue = [this.root];
 
     while (queue.length) {
       let currentNode = queue.shift();
