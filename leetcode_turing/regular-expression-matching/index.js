@@ -56,7 +56,7 @@ Constraints:
  * @return {boolean}
  */
 var isMatch = function (s, p) {
-  const regx = new RegExp(`${p}`);
+  const regx = new RegExp(p);
   const match = s.match(regx);
 
   return match !== null && match.input === match[0];
