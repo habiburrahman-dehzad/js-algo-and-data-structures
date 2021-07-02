@@ -45,3 +45,12 @@ test('should return the correct result', () => {
 
   expect(result).toEqual(true);
 });
+
+test('should return the correct result', () => {
+  const result = isMatch(
+    'bbbbabaabbabbababaabaabababaababaaaabaaabbbabbbbbbabbabbabbaaabaababbbababbbaaababbbbaabbaababbabababbbbbbabbbbbaabbabaababbabbbbbbaabbbabbbaabaaababaabaaaabababbababbaaabbaabaabaabbbbbbaabbaaaaaabbabb',
+    'aa***bb*b**a***bb***b*b*ba********ba***bbbb*bba*a*b***ba*a*b**aabbba*aba****a*ba*****a*bab**a**b**b*a*'
+  );
+
+  expect(result).toEqual(false);
+});

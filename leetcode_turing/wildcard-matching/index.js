@@ -58,27 +58,37 @@ Constraints:
  */
 var isMatch = function (s, p) {
   let newp = '';
+  let lastCh = '';
   for (const c of p) {
-    if (c === '*' && newp[newp.length - 1] === '*') {
+    if (c === '*' && lastCh === '*') {
       continue;
     }
     newp += c;
+    lastCh = c;
   }
 
-  newp = newp.replace(/\?/g, '.');
-  newp = newp.replace(/\*/g, '[a-z]*');
+  p = newp;
 
-  const regex = new RegExp(newp);
-  const match = s.match(regex);
+  const dp = Array(s.length + 1)
+    .fill(0)
+    .map(() => Array(p.length + 1).fill(false));
 
-  return match !== null && match.input === match[0];
+  dp[0][0] = true;
+  if (p[0] === '*') {
+    dp[0][1] = true;
+  }
+
+  for (let si = 1; si <= s.length; si++) {
+    for (let pi = 1; pi <= p.length; pi++) {
+      const cs = s[si - 1];
+      const cp = p[pi - 1];
+      if (cs === cp || cp === '?') dp[si][pi] = dp[si - 1][pi - 1];
+      if (cp === '*') dp[si][pi] = dp[si - 1][pi] || dp[si][pi - 1];
+    }
+  }
+  return dp[s.length][p.length];
 };
 
-console.log(
-  isMatch(
-    'bbbbabaabbabbababaabaabababaababaaaabaaabbbabbbbbbabbabbabbaaabaababbbababbbaaababbbbaabbaababbabababbbbbbabbbbbaabbabaababbabbbbbbaabbbabbbaabaaababaabaaaabababbababbaaabbaabaabaabbbbbbaabbaaaaaabbabb',
-    'aa***bb*b**a***bb***b*b*ba********ba***bbbb*bba*a*b***ba*a*b**aabbba*aba****a*ba*****a*bab**a**b**b*a*'
-  )
-);
+console.log(isMatch('acdcb', 'a*c?b'));
 
 module.exports = isMatch;
